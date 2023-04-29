@@ -20,7 +20,7 @@ export default function Topbar(props) {
 
       <div className="ml-auto h-full">
         <button className={"px-2 h-full rounded-md " + (page === "admin" ? "bg-purple-200" : "")} onClick={() => setPage("admin")}>
-          Administration
+          Administration (only visible to admin accounts)
         </button>
         <button className="px-2 h-full" onClick={() => setPage("login")}>
           Log Out

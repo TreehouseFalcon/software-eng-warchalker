@@ -33,8 +33,11 @@ export default function EditAccessPoint(props) {
         </div>
       )}
 
-      <div className="flex flex-col gap-2">
-        <button className="bg-emerald-300 rounded-md border-2 border-gray-500" onClick={props.onSave}>
+      <div className="flex flex-row gap-2">
+        <button className=" flex-grow px-2 bg-red-300 rounded-md border-2 border-gray-500" onClick={props.onSave}>
+          Cancel
+        </button>
+        <button className="flex-grow px-2 bg-emerald-300 rounded-md border-2 border-gray-500" onClick={props.onSave}>
           Save changes
         </button>
       </div>

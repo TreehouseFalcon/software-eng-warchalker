@@ -35,6 +35,9 @@ export default function ViewAccessPoint(props) {
           <button className="bg-orange-300 w-full rounded-md border-2 border-gray-500" onClick={props.onEdit}>
             Edit access point
           </button>
+          <button className="bg-red-400 rounded-md border-2 border-gray-500" onClick={props.onSave}>
+            Delete access point (ADMIN ONLY)
+          </button>
         </div>
       </div>
     </div>
