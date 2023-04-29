@@ -29,7 +29,7 @@ export default function ViewAccessPoint(props) {
           <button className="bg-sky-300 w-full rounded-md border-2 border-gray-500" onClick={props.onSave}>
             Copy network password
           </button>
-          <button className="bg-sky-300 w-full rounded-md border-2 border-gray-500" onClick={props.onReview}>
+          <button className="bg-sky-300 w-full rounded-md border-2 border-gray-500" onClick={props.onRate}>
             Rate access point
           </button>
           <button className="bg-orange-300 w-full rounded-md border-2 border-gray-500" onClick={props.onEdit}>

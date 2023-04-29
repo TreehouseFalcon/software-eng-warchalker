@@ -5,6 +5,7 @@ import EditAccessPoint from "./EditAccessPoint";
 import ViewAccessPoint from "./ViewAccessPoint";
 import EditProfile from "./EditProfile";
 import ViewProfile from "./ViewProfile";
+import Rate from "./Rate";
 
 export default function MainPage(props) {
   const page = props.page;
@@ -12,6 +13,7 @@ export default function MainPage(props) {
 
   const [modalVisible, setModalVisible] = useState("");
   const [profileMode, setProfileMode] = useState("");
+  const [rateVisible, setRateVisible] = useState(false);
 
   return (
     <div className="w-screen h-screen flex flex-col">
@@ -63,6 +65,9 @@ export default function MainPage(props) {
                     onViewProfile={() => {
                       setProfileMode("view");
                     }}
+                    onRate={() => {
+                      setRateVisible(true);
+                    }}
                   />
                 )}
                 {modalVisible === "mark" && (
@@ -77,7 +82,14 @@ export default function MainPage(props) {
                     onSave={() => {
                       setModalVisible("");
                     }}
-                    onReview={() => {}}
+                  />
+                )}
+
+                {rateVisible && (
+                  <Rate
+                    onSave={() => {
+                      setRateVisible(false);
+                    }}
                   />
                 )}
 

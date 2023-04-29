@@ -3,6 +3,7 @@ import LoginPage from "./LoginPage";
 import MainPage from "./MainPage";
 import EventsPage from "./EventsPage";
 import ForumPage from "./ForumPage";
+import AdminPage from "./AdminPage";
 
 export default function App() {
   const [page, setPage] = useState("login");
@@ -20,6 +21,9 @@ export default function App() {
       break;
     case "forum":
       PageComponent = ForumPage;
+      break;
+    case "admin":
+      PageComponent = AdminPage;
       break;
     default:
       console.warn("No page component found for page: " + page);
